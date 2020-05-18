@@ -1,0 +1,8 @@
+/build
+/node_modules
+/cjs
+/dist
+/i18nextHttpBackend.js
+/i18nextHttpBackend.min.js
+/example
+/test/deno

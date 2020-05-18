@@ -1,0 +1,13 @@
+.*
+test
+dist
+.gitignore
+.editorconfig
+.eslintignore
+.eslintrc
+.travis.yml
+.github
+package-lock.json
+README.md
+tsconfig.json
+example
