@@ -4,17 +4,27 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.defaults = defaults;
 exports["default"] = void 0;
 
 var _emojiFromWord = _interopRequireDefault(require("emoji-from-word"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+var arr = [];
+var each = arr.forEach;
+var slice = arr.slice;
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function defaults(obj) {
+  each.call(slice.call(arguments, 1), function (source) {
+    if (source) {
+      for (var prop in source) {
+        if (obj[prop] === undefined) obj[prop] = source[prop];
+      }
+    }
+  });
+  return obj;
+}
 
 var _default = {
   name: 'emoji',
@@ -23,11 +33,10 @@ var _default = {
     wordSeparator: ' '
   },
   setOptions: function setOptions(options) {
-    this.options = _objectSpread(_objectSpread({}, this.options), options);
+    this.options = defaults(options, this.options || {});
   },
   process: function process(value, key, options, translator) {
-    var opt = this.options = _objectSpread(_objectSpread({}, this.options), options);
-
+    var opt = this.options = defaults(options, this.options || {});
     var p = (value || key).split(opt.wordSeparator);
     return p.map(function (word) {
       var ret = (0, _emojiFromWord["default"])(word);
@@ -42,7 +51,6 @@ var _default = {
   }
 };
 exports["default"] = _default;
-module.exports = exports.default;
 },{"emoji-from-word":2}],2:[function(require,module,exports){
 "use strict";
 
