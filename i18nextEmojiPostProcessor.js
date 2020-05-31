@@ -37,7 +37,7 @@ var _default = {
   },
   process: function process(value, key, options, translator) {
     var opt = this.options = defaults(options, this.options || {});
-    var p = (value || key).split(opt.wordSeparator);
+    var p = (value || key || '').split(opt.wordSeparator);
     return p.map(function (word) {
       var ret = (0, _emojiFromWord["default"])(word);
       if (!ret || !ret.emoji || !ret.emoji["char"]) return (0, _emojiFromWord["default"])('question').emoji["char"];
