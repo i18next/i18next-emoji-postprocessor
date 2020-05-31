@@ -49,7 +49,7 @@ import emoji from 'i18next-emoji-postprocessor';
 i18next
   .use(emoji)
   .init({
-    overloadTranslationOptionHandler: emoji.overloadTranslationOptionHandler
+    postProcess: 'emoji'
   });
 
 // your normal resources
