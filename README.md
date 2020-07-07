@@ -40,7 +40,7 @@ i18next.t('key', { postProcess: 'emoji' });
 // --> '⭕ 🌐'
 ```
 
-# Using overloadTranslationOptionHandler
+# Using global options
 
 ```js
 import i18next from 'i18next';
