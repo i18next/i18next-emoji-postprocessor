@@ -12,7 +12,7 @@ This is a postProcessor plugin for i18next using in Node.js and in the browser t
 
 Source can be loaded via [npm](https://www.npmjs.com/package/i18next-emoji-postprocessor) or [downloaded](https://github.com/i18next/i18next-emoji-postprocessor/blob/master/i18nextEmojiPostProcessor.min.js) from this repo.
 
-```
+```bash
 # npm package
 $ npm install i18next-emoji-postprocessor
 ```
