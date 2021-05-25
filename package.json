@@ -52,12 +52,7 @@
   "bugs": {
     "url": "https://github.com/i18next/i18next-emoji-postprocessor/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/i18next/i18next-emoji-postprocessor/master/licence"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "compile": "rm -rf cjs && mkdir cjs && babel lib -d cjs --presets=@babel/preset-env --plugins=add-module-exports && echo '{\"type\":\"commonjs\"}' > cjs/package.json",
