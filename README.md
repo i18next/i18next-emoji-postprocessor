@@ -1,7 +1,6 @@
 # Introduction
 
 [![Actions](https://github.com/i18next/i18next-emoji-postprocessor/workflows/node/badge.svg)](https://github.com/i18next/i18next-emoji-postprocessor/actions?query=workflow%3Anode)
-[![Travis](https://img.shields.io/travis/i18next/i18next-emoji-postprocessor/master.svg?style=flat-square)](https://travis-ci.org/i18next/i18next-emoji-postprocessor)
 [![npm version](https://img.shields.io/npm/v/i18next-emoji-postprocessor.svg?style=flat-square)](https://www.npmjs.com/package/i18next-emoji-postprocessor)
 
 This is a postProcessor plugin for i18next using in Node.js and in the browser that replaces all words with emojis.
